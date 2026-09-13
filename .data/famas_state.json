@@ -1,0 +1,480 @@
+{
+  "savedAt": "2026-09-10T21:52:03.167Z",
+  "version": "1.0",
+  "counts": {
+    "users": 6,
+    "vehicles": 6,
+    "drivers": 5,
+    "trips": 5,
+    "repairs": 4,
+    "notifications": 4
+  },
+  "data": {
+    "users": [
+      {
+        "_id": "6aa326806f75c8e32ef12745",
+        "username": "admin",
+        "email": "admin@fleet.com",
+        "password": "$2b$10$EhUOzlTZgQlYjCd6KFU0FOtVAsxIchRXjbX3baXDISmTfrD.nhhxG",
+        "role": "admin",
+        "createdAt": "2026-09-10T21:52:00.554Z",
+        "updatedAt": "2026-09-10T21:52:00.554Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326806f75c8e32ef12746",
+        "username": "dispatcher",
+        "email": "dispatcher@fleet.com",
+        "password": "$2b$10$JPVRUJAk0jOIAyWCGAV.feDZjWVPDpplSWIPSgfFxA9U1wkJ7wcSO",
+        "role": "dispatcher",
+        "createdAt": "2026-09-10T21:52:00.667Z",
+        "updatedAt": "2026-09-10T21:52:00.667Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326806f75c8e32ef12747",
+        "username": "driver_john",
+        "email": "driver.john@fleet.com",
+        "password": "$2b$10$Bm322q7mKDVCjUO7C1nqbOcgfH4XQqgcjDUVCuZJeo864PdK04V/y",
+        "role": "driver",
+        "createdAt": "2026-09-10T21:52:00.759Z",
+        "updatedAt": "2026-09-10T21:52:00.759Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326806f75c8e32ef12748",
+        "username": "driver_sarah",
+        "email": "driver.sarah@fleet.com",
+        "password": "$2b$10$MmrXyTjnF.oVfit5lq03tuzNxdOwc6GFznPvkGAN2bPL.Au4Zri9u",
+        "role": "driver",
+        "createdAt": "2026-09-10T21:52:00.851Z",
+        "updatedAt": "2026-09-10T21:52:00.851Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326806f75c8e32ef12749",
+        "username": "driver_michael",
+        "email": "driver.michael@fleet.com",
+        "password": "$2b$10$CI4N.UUiDWfLUJUirXXGoO62qfNv7p9vhsLGfz5qsTw88oYNLXRjy",
+        "role": "driver",
+        "createdAt": "2026-09-10T21:52:00.943Z",
+        "updatedAt": "2026-09-10T21:52:00.943Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326836f75c8e32ef12761",
+        "username": "testdriver_ivan",
+        "email": "ivan.test@fleet.com",
+        "password": "$2b$10$JmMkM.PAkpfCAgxAcMvUse5sX9oO77PmKTO1SUI4YlpUoD1DSc8t6",
+        "role": "driver",
+        "createdAt": "2026-09-10T21:52:03.043Z",
+        "updatedAt": "2026-09-10T21:52:03.043Z",
+        "__v": 0
+      }
+    ],
+    "vehicles": [
+      {
+        "_id": "6aa326816f75c8e32ef1274a",
+        "make": "Volvo",
+        "model": "FH16 750 Globetrotter",
+        "registrationNumber": "FL-9201-TR",
+        "year": 2022,
+        "status": "in_use",
+        "technicalInspection": {
+          "validUntil": "2027-03-19T21:52:01.044Z"
+        },
+        "insurance": {
+          "validUntil": "2027-05-08T21:52:01.044Z",
+          "provider": "Allianz Heavy Transport",
+          "policyNumber": "ALZ-TRK-99210"
+        },
+        "fuelType": "diesel",
+        "fuelConsumption": 29.5,
+        "currentMileage": 148200,
+        "createdAt": "2026-09-10T21:52:01.047Z",
+        "updatedAt": "2026-09-10T21:52:01.047Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1274b",
+        "make": "Mercedes-Benz",
+        "model": "Actros 1845 BigSpace",
+        "registrationNumber": "FL-4412-MB",
+        "year": 2021,
+        "status": "in_use",
+        "technicalInspection": {
+          "validUntil": "2026-09-15T21:52:01.044Z"
+        },
+        "insurance": {
+          "validUntil": "2026-12-14T21:52:01.044Z",
+          "provider": "Zurich Fleet Global",
+          "policyNumber": "ZUR-8834-01"
+        },
+        "fuelType": "diesel",
+        "fuelConsumption": 27.8,
+        "currentMileage": 215600,
+        "createdAt": "2026-09-10T21:52:01.050Z",
+        "updatedAt": "2026-09-10T21:52:01.050Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1274c",
+        "make": "Scania",
+        "model": "R500 V8 Highline",
+        "registrationNumber": "FL-8833-SC",
+        "year": 2023,
+        "status": "available",
+        "technicalInspection": {
+          "validUntil": "2027-04-18T21:52:01.044Z"
+        },
+        "insurance": {
+          "validUntil": "2026-10-02T21:52:01.044Z",
+          "provider": "AXA Corporate Solutions",
+          "policyNumber": "AXA-EU-33129"
+        },
+        "fuelType": "diesel",
+        "fuelConsumption": 28.2,
+        "currentMileage": 84300,
+        "createdAt": "2026-09-10T21:52:01.052Z",
+        "updatedAt": "2026-09-10T21:52:01.052Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1274d",
+        "make": "MAN",
+        "model": "TGX 18.510 Individual Lion",
+        "registrationNumber": "FL-1190-MN",
+        "year": 2020,
+        "status": "maintenance",
+        "technicalInspection": {
+          "validUntil": "2026-09-07T21:52:01.044Z"
+        },
+        "insurance": {
+          "validUntil": "2027-01-28T21:52:01.044Z",
+          "provider": "Allianz Heavy Transport",
+          "policyNumber": "ALZ-TRK-77142"
+        },
+        "fuelType": "diesel",
+        "fuelConsumption": 30.1,
+        "currentMileage": 298400,
+        "createdAt": "2026-09-10T21:52:01.054Z",
+        "updatedAt": "2026-09-10T21:52:01.054Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1274e",
+        "make": "Ford",
+        "model": "Transit 350 L3H3 EcoBlue",
+        "registrationNumber": "FL-6320-FT",
+        "year": 2023,
+        "status": "available",
+        "technicalInspection": {
+          "validUntil": "2027-07-17T21:52:01.044Z"
+        },
+        "insurance": {
+          "validUntil": "2027-03-09T21:52:01.044Z",
+          "provider": "Zurich Fleet Global",
+          "policyNumber": "ZUR-5510-77"
+        },
+        "fuelType": "diesel",
+        "fuelConsumption": 9.4,
+        "currentMileage": 42100,
+        "createdAt": "2026-09-10T21:52:01.056Z",
+        "updatedAt": "2026-09-10T21:52:01.056Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1274f",
+        "make": "Renault Trucks",
+        "model": "T High 480 Sleeper",
+        "registrationNumber": "FL-7744-RN",
+        "year": 2022,
+        "status": "available",
+        "technicalInspection": {
+          "validUntil": "2027-01-28T21:52:01.044Z"
+        },
+        "insurance": {
+          "validUntil": "2026-09-14T21:52:01.044Z",
+          "provider": "AXA Corporate Solutions",
+          "policyNumber": "AXA-EU-88402"
+        },
+        "fuelType": "diesel",
+        "fuelConsumption": 28,
+        "currentMileage": 112000,
+        "createdAt": "2026-09-10T21:52:01.058Z",
+        "updatedAt": "2026-09-10T21:52:01.058Z",
+        "__v": 0
+      }
+    ],
+    "drivers": [
+      {
+        "_id": "6aa326816f75c8e32ef12750",
+        "firstName": "John",
+        "lastName": "Davis",
+        "phone": "+49 171 4920194",
+        "email": "driver.john@fleet.com",
+        "licenseCategory": "C+E",
+        "experienceYears": 8,
+        "status": "assigned",
+        "assignedVehicle": "6aa326816f75c8e32ef1274a",
+        "user": "6aa326806f75c8e32ef12747",
+        "createdAt": "2026-09-10T21:52:01.060Z",
+        "updatedAt": "2026-09-10T21:52:01.060Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12751",
+        "firstName": "Sarah",
+        "lastName": "Miller",
+        "phone": "+49 172 8841029",
+        "email": "driver.sarah@fleet.com",
+        "licenseCategory": "C+E",
+        "experienceYears": 6,
+        "status": "assigned",
+        "assignedVehicle": "6aa326816f75c8e32ef1274b",
+        "user": "6aa326806f75c8e32ef12748",
+        "createdAt": "2026-09-10T21:52:01.061Z",
+        "updatedAt": "2026-09-10T21:52:01.061Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12752",
+        "firstName": "Michael",
+        "lastName": "Brown",
+        "phone": "+49 170 3391820",
+        "email": "driver.michael@fleet.com",
+        "licenseCategory": "C",
+        "experienceYears": 4,
+        "status": "available",
+        "assignedVehicle": null,
+        "user": "6aa326806f75c8e32ef12749",
+        "createdAt": "2026-09-10T21:52:01.062Z",
+        "updatedAt": "2026-09-10T21:52:01.062Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12753",
+        "firstName": "Emma",
+        "lastName": "Wilson",
+        "phone": "+49 175 6629104",
+        "email": "emma.wilson@fleet.com",
+        "licenseCategory": "B",
+        "experienceYears": 5,
+        "status": "available",
+        "assignedVehicle": "6aa326816f75c8e32ef1274e",
+        "user": null,
+        "createdAt": "2026-09-10T21:52:01.063Z",
+        "updatedAt": "2026-09-10T21:52:01.063Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326836f75c8e32ef12762",
+        "firstName": "Иван",
+        "lastName": "Димитров",
+        "phone": "+359888999888",
+        "email": "ivan.test@fleet.com",
+        "licenseCategory": "C+E",
+        "experienceYears": 3,
+        "status": "available",
+        "assignedVehicle": null,
+        "user": "6aa326836f75c8e32ef12761",
+        "createdAt": "2026-09-10T21:52:03.158Z",
+        "updatedAt": "2026-09-10T21:52:03.158Z",
+        "__v": 0
+      }
+    ],
+    "trips": [
+      {
+        "_id": "6aa326816f75c8e32ef12754",
+        "origin": "Rotterdam Port, NL",
+        "destination": "Frankfurt Hub, DE",
+        "cargo": "Automotive Precision Components (18 tons)",
+        "deadline": "2026-09-11T21:52:01.044Z",
+        "status": "in_progress",
+        "driver": "6aa326816f75c8e32ef12750",
+        "vehicle": "6aa326816f75c8e32ef1274a",
+        "distance": 450,
+        "fuelUsed": 132,
+        "createdAt": "2026-09-10T21:52:01.065Z",
+        "updatedAt": "2026-09-10T21:52:01.065Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12755",
+        "origin": "Hamburg Cargo Terminal, DE",
+        "destination": "Prague Central Depot, CZ",
+        "cargo": "Industrial Automation Machinery (14 tons)",
+        "deadline": "2026-09-12T21:52:01.044Z",
+        "status": "in_progress",
+        "driver": "6aa326816f75c8e32ef12751",
+        "vehicle": "6aa326816f75c8e32ef1274b",
+        "distance": 640,
+        "fuelUsed": 178,
+        "createdAt": "2026-09-10T21:52:01.066Z",
+        "updatedAt": "2026-09-10T21:52:01.066Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12756",
+        "origin": "Antwerp Gateway, BE",
+        "destination": "Munich South Logistics, DE",
+        "cargo": "Temperature-controlled Pharmaceuticals (8 tons)",
+        "deadline": "2026-09-14T21:52:01.044Z",
+        "status": "planned",
+        "driver": "6aa326816f75c8e32ef12752",
+        "vehicle": "6aa326816f75c8e32ef1274c",
+        "distance": 720,
+        "fuelUsed": 0,
+        "createdAt": "2026-09-10T21:52:01.067Z",
+        "updatedAt": "2026-09-10T21:52:01.067Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12757",
+        "origin": "Paris Logistics Hub, FR",
+        "destination": "Lyon Distribution Park, FR",
+        "cargo": "Consumer Electronics & Appliances (12 tons)",
+        "deadline": "2026-09-08T21:52:01.044Z",
+        "status": "completed",
+        "driver": "6aa326816f75c8e32ef12750",
+        "vehicle": "6aa326816f75c8e32ef1274a",
+        "distance": 465,
+        "fuelUsed": 136,
+        "createdAt": "2026-09-10T21:52:01.068Z",
+        "updatedAt": "2026-09-10T21:52:01.068Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12758",
+        "origin": "Amsterdam Airport Cargo, NL",
+        "destination": "Brussels South Hub, BE",
+        "cargo": "Express High-Value Retail Packages (2.5 tons)",
+        "deadline": "2026-09-06T21:52:01.044Z",
+        "status": "completed",
+        "driver": "6aa326816f75c8e32ef12753",
+        "vehicle": "6aa326816f75c8e32ef1274e",
+        "distance": 215,
+        "fuelUsed": 21,
+        "createdAt": "2026-09-10T21:52:01.076Z",
+        "updatedAt": "2026-09-10T21:52:01.076Z",
+        "__v": 0
+      }
+    ],
+    "repairs": [
+      {
+        "_id": "6aa326816f75c8e32ef12759",
+        "vehicle": "6aa326816f75c8e32ef1274d",
+        "description": "Transmission overhaul and clutch assembly replacement",
+        "repairDate": "2026-09-05T21:52:01.044Z",
+        "cost": 2850,
+        "serviceProvider": "MAN Truck & Bus Service Frankfurt",
+        "mileage": 297500,
+        "notes": "Awaiting final warranty clearance and test drive inspection.",
+        "createdAt": "2026-09-10T21:52:01.078Z",
+        "updatedAt": "2026-09-10T21:52:01.078Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1275a",
+        "vehicle": "6aa326816f75c8e32ef1274b",
+        "description": "Front and rear axle brake pad replacement & caliper check",
+        "repairDate": "2026-08-23T21:52:01.044Z",
+        "cost": 1420,
+        "serviceProvider": "EuroFleet Maintenance GmbH",
+        "mileage": 212000,
+        "notes": "Replaced wear sensors; calibrated braking balance.",
+        "createdAt": "2026-09-10T21:52:01.079Z",
+        "updatedAt": "2026-09-10T21:52:01.079Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1275b",
+        "vehicle": "6aa326816f75c8e32ef1274a",
+        "description": "Scheduled 140k major service: synthetic engine oil, oil/fuel/cabin filters, AdBlue injector flush",
+        "repairDate": "2026-08-09T21:52:01.044Z",
+        "cost": 890,
+        "serviceProvider": "Volvo Truck Center Rotterdam",
+        "mileage": 140500,
+        "notes": "All fluid diagnostics within optimal manufacturer limits.",
+        "createdAt": "2026-09-10T21:52:01.080Z",
+        "updatedAt": "2026-09-10T21:52:01.080Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1275c",
+        "vehicle": "6aa326816f75c8e32ef1274c",
+        "description": "Cooling system thermostat valve replacement and pressure test",
+        "repairDate": "2026-07-27T21:52:01.044Z",
+        "cost": 620,
+        "serviceProvider": "Scania Certified Workshop Cologne",
+        "mileage": 81000,
+        "notes": "System refilled with factory Longlife coolant.",
+        "createdAt": "2026-09-10T21:52:01.081Z",
+        "updatedAt": "2026-09-10T21:52:01.081Z",
+        "__v": 0
+      }
+    ],
+    "notifications": [
+      {
+        "_id": "6aa326816f75c8e32ef1275d",
+        "type": "inspection_expiry",
+        "title": "Inspection Expiring Soon (5d): FL-4412-MB",
+        "message": "Vehicle Mercedes-Benz Actros 1845 BigSpace (FL-4412-MB) technical inspection will expire in 5 day(s) on 9/15/2026.",
+        "severity": "critical",
+        "relatedEntity": "Vehicle",
+        "relatedEntityId": "6aa326816f75c8e32ef1274b",
+        "read": false,
+        "targetRole": "all",
+        "targetUser": null,
+        "createdAt": "2026-09-10T21:52:01.115Z",
+        "updatedAt": "2026-09-10T21:52:01.115Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1275e",
+        "type": "insurance_expiry",
+        "title": "Insurance Expiration Warning: FL-8833-SC",
+        "message": "Vehicle Scania R500 V8 Highline (FL-8833-SC) insurance policy expires in 22 days.",
+        "severity": "warning",
+        "relatedEntity": "Vehicle",
+        "relatedEntityId": "6aa326816f75c8e32ef1274c",
+        "read": false,
+        "targetRole": "all",
+        "targetUser": null,
+        "createdAt": "2026-09-10T21:52:01.119Z",
+        "updatedAt": "2026-09-10T21:52:01.119Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef1275f",
+        "type": "inspection_expiry",
+        "title": "Technical Inspection Expired: FL-1190-MN",
+        "message": "Vehicle MAN TGX 18.510 Individual Lion (FL-1190-MN) technical inspection expired 3 day(s) ago! Action required immediately.",
+        "severity": "critical",
+        "relatedEntity": "Vehicle",
+        "relatedEntityId": "6aa326816f75c8e32ef1274d",
+        "read": false,
+        "targetRole": "all",
+        "targetUser": null,
+        "createdAt": "2026-09-10T21:52:01.124Z",
+        "updatedAt": "2026-09-10T21:52:01.124Z",
+        "__v": 0
+      },
+      {
+        "_id": "6aa326816f75c8e32ef12760",
+        "type": "insurance_expiry",
+        "title": "Insurance Expiring Soon (4d): FL-7744-RN",
+        "message": "Vehicle Renault Trucks T High 480 Sleeper (FL-7744-RN) insurance policy with AXA Corporate Solutions expires in 4 day(s).",
+        "severity": "critical",
+        "relatedEntity": "Vehicle",
+        "relatedEntityId": "6aa326816f75c8e32ef1274f",
+        "read": false,
+        "targetRole": "all",
+        "targetUser": null,
+        "createdAt": "2026-09-10T21:52:01.129Z",
+        "updatedAt": "2026-09-10T21:52:01.129Z",
+        "__v": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "FAMAS — Fleet Administration & Management Automation System",
+  "description": "FAMAS (Fleet Administration & Management Automation System) — Full-stack fleet management platform with role-based access control, vehicle & driver tracking, trips, repairs, and document expiration monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
