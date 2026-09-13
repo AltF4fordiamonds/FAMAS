@@ -582,7 +582,6 @@ export const TripsPage: React.FC = () => {
                   <option value="planned">Planned</option>
                   <option value="in_progress">In Progress (Active Journey)</option>
                   <option value="completed">Completed (Delivered)</option>
-                  <option value="cancelled">Cancelled</option>
                 </select>
               </div>
 

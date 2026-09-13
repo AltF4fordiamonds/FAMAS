@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
+import { describe, it, expect, beforeAll, afterAll, beforeEach, vi } from 'vitest';
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import { User } from '../server/models/User.js';
@@ -6,6 +6,7 @@ import { Vehicle } from '../server/models/Vehicle.js';
 import { Driver } from '../server/models/Driver.js';
 import { Trip } from '../server/models/Trip.js';
 import { authorizeRoles } from '../server/middleware/auth.js';
+import { updateTrip } from '../server/controllers/tripController.js';
 
 let mongod: MongoMemoryServer;
 
@@ -111,5 +112,59 @@ describe('RBAC & Referential Integrity', () => {
     // Deletion should be blocked
     const canDelete = activeTrips.length === 0;
     expect(canDelete).toBe(false);
+  });
+
+  it('should restrict driver trip status updates to planned, in_progress, and completed', async () => {
+    const driverUserId = new mongoose.Types.ObjectId();
+    const vehicle = await Vehicle.create({
+      make: 'Volvo',
+      model: 'FH 500',
+      registrationNumber: 'PB1122PB',
+      year: 2022,
+      status: 'available',
+      fuelType: 'diesel',
+      fuelConsumption: 24,
+      currentMileage: 120000,
+      technicalInspection: { validUntil: new Date('2028-04-01') },
+      insurance: { validUntil: new Date('2028-04-01'), provider: 'Allianz', policyNumber: 'INS-444' },
+    });
+
+    const driver = await Driver.create({
+      user: driverUserId,
+      firstName: 'Ivan',
+      lastName: 'Petrov',
+      phone: '+359888333444',
+      email: 'ivan.petrov@fleet.com',
+      licenseCategory: 'C',
+      status: 'available',
+    });
+
+    const trip = await Trip.create({
+      origin: 'Sofia',
+      destination: 'Plovdiv',
+      cargo: 'Food supplies',
+      deadline: new Date('2026-10-22'),
+      driver: driver._id,
+      vehicle: vehicle._id!,
+      status: 'planned',
+      distance: 0,
+      fuelUsed: 0,
+    });
+
+    const req: any = {
+      params: { id: trip._id.toString() },
+      user: { _id: driverUserId, role: 'driver' },
+      body: { status: 'cancelled' },
+    };
+
+    const res: any = {
+      status: vi.fn().mockReturnThis(),
+      json: vi.fn(),
+    };
+
+    await updateTrip(req, res, vi.fn());
+
+    expect(res.status).toHaveBeenCalledWith(400);
+    expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ error: true }));
   });
 });

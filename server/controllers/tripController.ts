@@ -192,6 +192,15 @@ export const updateTrip = async (req: AuthRequest, res: Response, next: NextFunc
         return;
       }
 
+      const driverAllowedStatuses = ['planned', 'in_progress', 'completed'];
+      if (req.body.status && !driverAllowedStatuses.includes(req.body.status)) {
+        res.status(400).json({
+          error: true,
+          message: 'Drivers can only set trip status to planned, in progress, or completed.',
+        });
+        return;
+      }
+
       // Drivers can only update status, distance, and fuelUsed
       const allowedUpdates: any = {};
       if (req.body.status) allowedUpdates.status = req.body.status;
